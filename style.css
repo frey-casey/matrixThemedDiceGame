@@ -1,0 +1,229 @@
+input:hover{
+    border:solid;
+   outline: 55px;        
+outline-color:   #c01010a7;
+}
+
+.buttonBunch:hover{
+border-color: rgb(11, 200, 46);
+    border:solid auto;
+
+}
+.playingDice:hover{
+    outline-color: rgb(11, 200, 46);
+    outline: auto;
+
+    }
+
+    #dicePosition{
+        opacity: .53987;
+    }
+    #diceAndBoxes{
+        background-color: transparent;
+        padding-top:50px;
+        overflow: hidden;
+        padding-left: 28.666%;
+
+        margin-top: 2.6rem;
+        margin-bottom: 1.6rem;
+    }
+
+    body{
+        color: green;
+        font-family: 'Roboto Condensed', sans-serif;
+        padding-top:100px;
+        background-color: #161b17;
+        font-size: 151%;
+        margin: 40px auto 60px;
+    }
+
+    p{
+        margin-left: 7.5%;
+    }
+
+    button{
+        /* color: green; */
+        font-family: 'Roboto Condensed', sans-serif;
+        width:149px;
+        height:33px;
+        border-width:6px;
+        color:rgba(0, 0, 0, 1);
+        border-color:#18ab29;
+        font-weight:bold;
+        border-top-left-radius:5px;
+        border-top-right-radius:5px;
+        border-bottom-left-radius:5px;
+        border-bottom-right-radius:5px;
+        box-shadow: -1px -3px 37px -8px rgba(39, 159, 39, 1);
+        text-shadow: 3px 2px 3px #2f6627;
+        background:linear-gradient(#44c767, #5cbf2a);
+        cursor: grab;
+        
+    }
+    button:hover{
+        transition: transform 0.254383s ease-in-out;
+        transform: scale(1.114383);
+    }
+    
+    h1{
+        text-align: center;
+        margin-top: 1.6rem;
+        margin-bottom: 1.6rem;
+        font-size: 75.4984px;
+        font-weight: 100;
+        font-family:matrix;
+        color:white;
+        opacity: .6887;
+    }
+    h2,h3,h4,h5{
+        margin-left: 7.5%;
+        padding:11.456px 0;
+        line-height: 2;
+        width:42.456%;
+        text-align: center;
+        margin:auto;   
+        margin-bottom: 2.6rem;
+    }
+    hr{
+        width:26.456rem;
+        color: darkgreen;
+        border-color: darkgreen;
+        margin-top: 1.6rem;
+        
+    }
+
+    em{
+        font-size: larger;
+        font-style:unset;
+    }
+
+    input[type="checkbox"]{
+        appearance: none;
+        -webkit-appearance: none;
+        height:15px;
+        width:15px;
+        cursor: pointer;
+        background-color: #2f6627a7;
+    }
+    input[type="checkbox"]:checked{
+        height:15px;
+        width:15px;
+        cursor: pointer;
+        background-color: #c01010a7;
+    }
+    input[type="checkbox"]:hover{
+        height:15px;
+        width:15px;
+        cursor: pointer;
+        border-color: #c01010a7;
+        transition: transform 0.254383s ease-in-out;
+        transform: scale(1.27685);
+    }
+    #submitButton{
+        position: flex;
+        /* flex: 0, 0, auto; */
+        /* flex-basis: 100%; */
+        tab-size: 4;
+        color-scheme: inherit;
+        border: 0 solid #000000;
+        box-sizing: border-box;
+        color: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        margin: 0;
+        text-transform: none;
+        background-color: transparent;
+        background-image: none;
+        cursor: grab;
+        /* align-items: center; */
+        /* border-color: transparent;
+        border-radius: 0.25rem;
+        border-width: 1px;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        padding: 0.5rem 0.75rem;
+        pointer-events: auto; */
+        /* position: absolute; */
+        /* top: 1rem;
+        right: 1rem; */
+        /* display: flex; */
+        /* justify-content: center; */
+        /* gap: 0.5rem; */
+        /* overflow: hidden; */
+        /* float: left; */
+        width:149px;
+        height:33px;
+        border-width:6px;
+        color:rgba(0, 0, 0, 1);
+        border-color:#18ab29;
+        font-weight:bold;
+        border-top-left-radius:5px;
+        border-top-right-radius:5px;
+        border-bottom-left-radius:5px;
+        border-bottom-right-radius:5px;
+        box-shadow: -1px -3px 37px -8px rgba(39, 159, 39, 1);
+        text-shadow: 3px 2px 3px #2f6627;
+        background:linear-gradient(#44c767, #5cbf2a);
+    }
+
+    #submitButton:hover{
+
+        position: flex;
+        /* flex: 0, 0, auto; */
+        /* flex-basis: 100%; */
+        tab-size: 4;
+        color-scheme: inherit;
+        border: 5px solid  linear-gradient(90deg, transparent 0%, #c01010a7 100%);
+        box-sizing: border-box;
+        color: black;
+        font-family: inherit;
+        font-weight: inherit;
+        margin: auto;
+        text-transform: none;
+        background-color: rgb(6, 176, 0);
+        background-image: none;
+        cursor: grab;
+        /* align-items: center; */
+        border-color: transparent;
+        border-radius: 0.25rem;
+        border-width: 1px;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        /* padding: 0.5rem 0.75rem; */
+        pointer-events: auto;
+        /* position: absolute; */
+        /* top: 1rem;
+        right: 1rem; */
+        /* display: flex; */
+        /* justify-content: center; */
+        /* gap: 0.5rem; */
+        /* overflow: hidden; */
+        /* float: left; */
+        transition: transform 0.254383s ease-in-out;
+        transform: scale(1.154383);
+    }
+
+    #rules{
+
+        text-align: center;
+        padding-left: 35.866%;
+        margin-top: 3.9rem;
+    }
+    #newGame:hover{
+        color:white;
+    }
+
+
+     
+
+      canvas{
+        
+            position: flex;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: -2;
+            opacity: 0.33974;
+
+      }
