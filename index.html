@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&display=swap" rel="stylesheet">
+<link rel="icon" href="Untitled_Artwork.ico"/>
+<style>
+  @font-face {
+    font-family: 'Matrix Code';
+    src: url('matrixCode.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Matrix';
+    src: url('matrix.ttf') format('truetype');
+  }
+
+  /* Use the font */
+</style>
+
+    <title>Casey's Game</title>
+</head>
+<body><canvas style="z-index:-2;        font-family: 'Matrix Code', monospace;
+        
+  font-size: 20.9888px;
+" id="Matrix" style="width: 100%; height: 100%;"></canvas>
+
+  <script>
+  const canvas = document.getElementById('Matrix');
+  const context = canvas.getContext('2d');
+  
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  
+  const katakana
+   = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン';
+  
+  const alphabet = katakana;
+  
+  const fontSize = 13*0.823553;
+  const columns = 153;
+  
+  const rainDrops = [];
+  
+  for (let x = 0; x < columns; x++) {
+    rainDrops[x] = 1;
+  }
+  
+  const draw = () => {
+  context.fillStyle = 'rgba(0, 0, 0, 0.075)';
+  context.fillRect(0, 0, canvas.width, canvas.height);
+
+  for (let i = 0; i < rainDrops.length; i++) {
+    const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+    const color = Math.random() > 0.1 ? '#0F0' : '#FFF'; // randomly choose green or white color
+    context.fillStyle = color;
+    context.fillText(text, i * fontSize, rainDrops[i] * fontSize);
+
+    if (rainDrops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+      rainDrops[i] = 0;
+    }
+    rainDrops[i]++;
+  }
+};
+  setInterval(draw, 57.6545641);
+
+  </script>
+       </table></div>
+    <h1 style="font-family:matrix">Dice Matrix Game</h1>
+   <div id="diceAndBoxes">
+    <table id="dicePosition">
+        <td class="buttonBunch"><img  class="playingDice" src="die 1-1.png"  width="100px" height="100px" alt="Playing die1" id="die1" /></td>
+        <td class="buttonBunch"><img  class="playingDice" src="die 1-1.png"  width="100px" height="100px" alt="Playing die2" id="die2" /></td>
+        <td class="buttonBunch"><img  class="playingDice" src="die 1-1.png"  width="100px" height="100px" alt="Playing die3" id="die3" /></td>
+        <td class="buttonBunch"><img  class="playingDice" src="die 1-1.png"  width="100px" height="100px" alt="Playing die4" id="die4" /></td>
+        <td class="buttonBunch"><img  class="playingDice" src="die 1-1.png"  width="100px" height="100px" alt="Playing die5" id="die5" /></td>
+        <td class="buttonBunch"><img  class="playingDice" src="die 1-1.png"  width="100px" height="100px" alt="Playing die6" id="die6" /></td>
+      </table>
+      
+      <form id="dice-form">
+       
+          <input class="customCheckbox"  style="position:relative; left:41px" type="checkbox" id="die-1-checkbox"  value="0">
+          <input class="customCheckbox"  style="position:relative; left:117px" type="checkbox" id="die-2-checkbox"  value="1">
+          <input class="customCheckbox"  style="position:relative; left:195px" type="checkbox" id="die-3-checkbox"  value="2">
+          <input class="customCheckbox"  style="position:relative; left:273px" type="checkbox" id="die-4-checkbox"  value="3">
+          <input class="customCheckbox"  style="position:relative; left:352px" type="checkbox" id="die-5-checkbox"  value="4">
+          <input class="customCheckbox"  style="position:relative; left:428px" type="checkbox" id="die-6-checkbox"  value="5">
+          <input  id="submitButton"  style="position:relative; left:568px; bottom:100px;" type="submit" value="Re-Roll Selected">
+      </form>
+    </div>
+      <table style="padding-left:519.354px; margin-top: 29px;">
+        <td> <button class="buttonBunch" id='roll-dice-button' width="125px" height="110px">Roll Dice</button></td>
+        <td><button onclick="uncheck()" class="buttonBunch" id="hold-button">Hold/End Turn</button></td>
+        <td><button id="newGame">New Game!</button></td>
+
+
+      </table>
+  
+        <p id="score" style="font-size:30px">Score</p>
+        <p id="playerPoints" style="font-size:28px">Player Points</p>
+        <p id="turnCount">Turn Number: 0</p>
+    
+        <script src="script.js"></script>
+        <H2 id="firstLineRolling" style="font-size:smaller;">•Try your hand at strategy by re-rolling once per turn.
+            <br><strong><em>•But be careful it might not be worth it!</em></strong>
+            <br>•Points add up at the end of your next turn!
+            <br>•See how many turns it takes you to get to 10,000 or more player points!<br>
+            • Some rolls may equal zero points!<br>
+            • Make sure you checkmark only the dice you want to <span style="color:#c01010a7;"><strong>re-roll!</strong></span>
+          <br>• When re-rolling dice keep in mind <span style="color:#c01010a7;"><strong>you may roll the same number!</strong></span></H2>
+        <H3><hr></H3>
+        <h4 style="font-size:2.6rem; margin-top: 1.6rem;">Scoring Points: </h4>
+            
+            <table id="rules" cellspacing="15px">
+             <tr> <td>1's =</td> <td> 100 points</td> </tr>
+             <tr><td>5's =</td> <td> 50 points</td> </tr>
+             <tr><td>Three 1's =</td> <td> 1000 points</td></tr>
+             <tr> <td>Three 2's =</td> <td> 200 points</td></tr>
+             <tr><td>Three 3's =</td> <td> 300 points </td></tr>
+             <tr><td>Three 4's =</td><td> 400 points</td> </tr>
+             <tr><td>Three 5's =</td> <td> 500 points</td></tr>
+             <tr><td>Three 6's =</td> <td> 600 points</td></tr>
+             <tr><td>1-2-3-4-5-6 =</td> <td> 3000 points</td></tr>
+             <tr><td>3-pairs =</td> <td> 1500 points</td></tr>
+             <tr><td>4 of a kind =</td> <td> 1000 points</td> </tr>
+             <tr><td>5 of a kind =</td> <td> 2000 points</td> </tr>
+             <tr><td>6 of a kind =</td> <td> 3000 points</td> </tr>
+             <tr><td>1-1-1-1-1-1 =</td> <td> 5000 points</td> </tr>
+             <tr><td>Two Triplets =</td> <td> 2500 points</td> </tr>
+             <tr><td>3 of a kind + pair =</td> <td> 3 of a kind value + 250 points</td> </tr>
+             <tr><td>4 of a kind + pair =</td> <td> 1450 points</td></tr>
+            </table>
+        <h5 style="color:rgb(49, 131, 31); margin:35px; text-align: center;padding-left: 27.866%;
+        ;">For multiplayer games:<br> get to 10,000 or more player points in the least amount of turns!<br><span style="font-weight:1100; font-size: larger;"><strong>THAT PLAYER WINS!</strong></span></h5>
+
+
+</body>
+</html>
